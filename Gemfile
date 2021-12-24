@@ -58,3 +58,4 @@ gem "unicorn", "~> 6.0", :group => :production
 gem "pg", "~> 1.2"
 gem "platform_sh_rails", "~> 0.1.12", :group => :production
 gem 'devise', '~> 4.8'
+gem 'friendly_id', '~> 5.4', '>= 5.4.2'
