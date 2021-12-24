@@ -1,32 +1,26 @@
-<%= form_with(model: school) do |form| %>
-  <% if school.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(school.errors.count, "error") %> prohibited this school from being saved:</h2>
 
-      <ul>
-        <% school.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="container">
+  <div class="m-8">
+    <%= form_with(model: school) do |form| %>
+      <% if school.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(school.errors.count, "error") %> prohibited this school from being saved:</h2>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+          <ul>
+            <% school.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= form.text_field :name, class:"p-2 rounded-md border-2", placeholder:"Nom d'etablissement..." %>
+      </div>
+      <div class="actions pt-2">
+        <%= form.submit "Add school", class:"bg-blue-500 p-2 text-md font-semibold rounded-md" %>
+      </div>
+    <% end %>
+
   </div>
-
-  <div class="field">
-    <%= form.label :slug %>
-    <%= form.text_field :slug %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

@@ -1,29 +1,8 @@
-<p id="notice"><%= notice %></p>
+<% content_for @title= @classroom.name %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @classroom.name %>
-</p>
+    <%= link_to 'Creez un exercice', new_classroom_exercice_path(@classroom), class:"lnb lnb-blue place-items-center" %>
 
-<p>
-  <strong>Slug:</strong>
-  <%= @classroom.slug %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @classroom.user_id %>
-</p>
-
-<p>
-  <strong>Level:</strong>
-  <%= @classroom.level_id %>
-</p>
-
-<p>
-  <strong>School:</strong>
-  <%= @classroom.school_id %>
-</p>
-
-<%= link_to 'Edit', edit_classroom_path(@classroom) %> |
-<%= link_to 'Back', classrooms_path %>
+<div class="list-container">
+    <h2>Quizzes pages for classroom</h2>
+    <%= render partial: "display_classroom_exercices_student", locals: {group: @group} %>
+</div>
