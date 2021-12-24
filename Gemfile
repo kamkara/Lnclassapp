@@ -57,8 +57,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "unicorn", "~> 6.0", :group => :production
 gem "pg", "~> 1.2"
 gem "platform_sh_rails", "~> 0.1.12", :group => :production
-gem 'devise', '~> 4.8'
 gem 'friendly_id', '~> 5.4', '>= 5.4.2'
 gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 gem 'jquery-rails'
-gem 'bootstrap_form', '~> 5.0'
+
+###### MEMBERSHIP  ######
+gem 'devise', '~> 4.8'
+#gem 'devise_lastseenable', '~> 0.0.6'
+#gem 'devise_invalidatable', '~> 0.1.0'
+#gem 'devise-security', '~> 0.16.0'
+#gem 'devise-encryptable', '~> 0.2.0'
+#gem 'devise_invitable', '~> 2.0', '>= 2.0.6'
