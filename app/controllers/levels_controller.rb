@@ -1,4 +1,5 @@
 class LevelsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_level, only: %i[ show edit update destroy ]
 
   # GET /levels or /levels.json
@@ -21,11 +22,11 @@ class LevelsController < ApplicationController
 
   # POST /levels or /levels.json
   def create
-    @level = Level.new(level_params)
+    @level = current_user.levels.build(level_params)
 
     respond_to do |format|
       if @level.save
-        format.html { redirect_to level_url(@level), notice: "Level was successfully created." }
+        format.html { redirect_to levels_path, notice: "Level was successfully created." }
         format.json { render :show, status: :created, location: @level }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +39,7 @@ class LevelsController < ApplicationController
   def update
     respond_to do |format|
       if @level.update(level_params)
-        format.html { redirect_to level_url(@level), notice: "Level was successfully updated." }
+        format.html { redirect_to levels_path, notice: "Level was successfully updated." }
         format.json { render :show, status: :ok, location: @level }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -50,7 +51,6 @@ class LevelsController < ApplicationController
   # DELETE /levels/1 or /levels/1.json
   def destroy
     @level.destroy
-
     respond_to do |format|
       format.html { redirect_to levels_url, notice: "Level was successfully destroyed." }
       format.json { head :no_content }
@@ -60,7 +60,7 @@ class LevelsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_level
-      @level = Level.find(params[:id])
+      @level = Level.friendly.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
