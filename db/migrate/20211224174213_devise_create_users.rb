@@ -37,7 +37,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.string "full_name"
       t.string "matricule"
       t.string "city"
-      t.string "school_id"
       t.string "status"
       t.string "gender"
       t.string "contact", default: "", null: false
@@ -47,6 +46,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.string "avatar_profil"
       t.uuid "level_id"
       t.uuid "material_id"
+      t.uuid "school_id"
       
       t.timestamps null: false
     end

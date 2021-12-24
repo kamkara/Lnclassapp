@@ -37,6 +37,6 @@ class ApplicationController < ActionController::Base
       end
       
       def find_schools
-        #@schools = School.all
+        @schools = School.all
       end
 end
