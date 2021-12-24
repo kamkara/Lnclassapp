@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to:'welcome#index'
-  
-  get "feeds", to:'home#index'
+  get "inscription-enseignant", to:'home#index'
+  #get "feeds", to:'home#index'
   ######### USER DATA #########
   devise_scope :user do
     get 'profile/edit'    => 'devise/registrations#edit',   :as => :edit_user_registration
@@ -15,5 +15,6 @@ Rails.application.routes.draw do
                                 :sign_up =>       '',
                                 :registration =>  'inscription',
                                 :edit =>          'edit'
+                              }
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
