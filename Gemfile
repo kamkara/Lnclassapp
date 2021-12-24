@@ -61,6 +61,10 @@ gem 'friendly_id', '~> 5.4', '>= 5.4.2'
 gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 gem 'jquery-rails'
 
+######  ######
+###### STYLES ######
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
+
 ###### AUTORISATION  ######
 gem 'pundit', '~> 2.1', '>= 2.1.1'
 

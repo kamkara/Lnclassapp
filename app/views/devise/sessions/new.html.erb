@@ -1,26 +1,43 @@
-<h2>Log in</h2>
 
+<% @title="Connexion" %>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+ <%= render 'shared/validation_errors', :record => resource %>
+        <%= render 'shared/flash_notice' %>
+<!-- component -->
+<div class="h-screen px-8 bg-white flex flex-col space-y-10 justify-center items-center">
+  <!-- lnclass logo -->
+ <div class="flex ">
+  <p class="font-bold text-white text-3xl md:text-3xl">
+    <span class="bg-blue-500 text-white">Ln</span><span class="text-blue-500">class</span>
+  </p>
+ </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+  <!-- Layout  -->
+  <div class="bg-white shadow-xl rounded p-2">
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <h1 class="text-3xl font-medium ">Connexion</h1>
+    <p class="text-sm">Veuillez-vous connecter pour accéder à la plateforme. </p> 
+
+    <div class="space-y-5 mt-2">
+       <%= f.text_field :logged, class:"w-full h-12 border border-gray-800 rounded px-3", placeholder:"N° Matricule ou Email..."  %>
+      <div class="w-full flex items-center  border border-gray-800 rounded my-2">
+        <%= f.password_field :password ,class:"w-full h-12", placeholder:"N° Tel ou Mot de passe" %> 
+      </div>
+
+      <!-- Remember-->
+       <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me , id:"remember_me" %>
+          <%= f.label :"Toujours connectez sur cet appareil", for:'remember_me', class:"mb-2" %>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Se Connecter", disable_with: 'Connexion encours...', class:"text-center w-full mx-2 bg-blue-500 rounded-md text-white text-xl  py-2 font-medium" %>
+     
   </div>
+
+  <!-- Footer -->
+  <p>Nouveau sur Lnclass ? <%= link_to  "S'Inscrire rapidement ici", new_user_registration_path, class:"text-blue-700 font-medium" %>  </p>
+</div>
 <% end %>
 
-<%= render "devise/shared/links" %>
