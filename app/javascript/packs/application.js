@@ -12,4 +12,11 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+//******** * BOOTSTRAP ******//
 
+//= require jquery3
+//= require popper
+//= require bootstrap
+
+
+import "stylesheets/application" // Add this line

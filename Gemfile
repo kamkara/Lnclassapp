@@ -59,3 +59,6 @@ gem "pg", "~> 1.2"
 gem "platform_sh_rails", "~> 0.1.12", :group => :production
 gem 'devise', '~> 4.8'
 gem 'friendly_id', '~> 5.4', '>= 5.4.2'
+gem 'bootstrap', '~> 5.1', '>= 5.1.3'
+gem 'jquery-rails'
+gem 'bootstrap_form', '~> 5.0'
