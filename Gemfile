@@ -61,6 +61,9 @@ gem 'friendly_id', '~> 5.4', '>= 5.4.2'
 gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 gem 'jquery-rails'
 
+###### AUTORISATION  ######
+gem 'pundit', '~> 2.1', '>= 2.1.1'
+
 ###### MEMBERSHIP  ######
 gem 'devise', '~> 4.8'
 #gem 'devise_lastseenable', '~> 0.0.6'
@@ -68,3 +71,4 @@ gem 'devise', '~> 4.8'
 #gem 'devise-security', '~> 0.16.0'
 #gem 'devise-encryptable', '~> 0.2.0'
 #gem 'devise_invitable', '~> 2.0', '>= 2.0.6'
+
