@@ -77,4 +77,4 @@ gem 'devise', '~> 4.8'
 #gem 'devise_invitable', '~> 2.0', '>= 2.0.6'
 
 
-gem "tailwindcss-rails", "~> 2.0"
+#gem "tailwindcss-rails", "~> 2.0"
