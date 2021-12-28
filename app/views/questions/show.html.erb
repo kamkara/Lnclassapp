@@ -6,18 +6,13 @@
 </p>
 
 <p>
-  <strong>Explain answer:</strong>
-  <%= @question.explain_answer %>
+  <strong>Exercice:</strong>
+  <%= @question.exercice_id %>
 </p>
 
 <p>
   <strong>User:</strong>
   <%= @question.user_id %>
-</p>
-
-<p>
-  <strong>Exercice:</strong>
-  <%= @question.exercice_id %>
 </p>
 
 <%= link_to 'Edit', edit_question_path(@question) %> |
