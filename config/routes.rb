@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :exercices
   resources :classrooms
   get 'dashboard/index'
   resources :courses
