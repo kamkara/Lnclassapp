@@ -1,5 +1,4 @@
 module ClassroomsHelper
-
     #student_results_count
     def student_results_count(exercice)
         result_count = exercice.results.count
