@@ -3,25 +3,24 @@
 
 <%= render "home/feed/navbar" %> 
 
-
-<div class="grid grid-cols-1 mt-12 lg:mt-28 lg:grid-cols-5 lg:gap-3">
-    <!-- sidebar-->
-    <div class="lg:ml-8 col-span-1 ">
-       <div class="place-items-center">
-        <%= render "home/feed/sidebar" %>
-       </div>
-        <%= render "home/feed/terms" %>
-    </div>
-    <!-- feed content-->
-    <div class="col-span-3">
-        <div class="place-items-center">
-            <%= render "home/feed/feed" %>
+<div class="grid grid-cols-1 mt-12 lg:grid-cols-5 lg:gap-3 ">
+        <!-- sidebar-->
+        <div class="col-span-1 lg:ml-20 lg:mt-12">
+            <div class="place-items-center">
+                <%= render "home/feed/sidebar" %>
+            </div>
+            <%= render "home/feed/terms" %>
         </div>
-    </div>
-    <!-- better feed -->
-    <div class="hidden col-span-1 lg:block lg:mr-28 "> 
-        <div class="place-items-center">
-            <%= render "home/feed/better_feed" %>
+        <!-- feed content-->
+        <div class="col-span-3 lg:mt-12">
+            <div class="place-items-center lg:mx-18">
+                <%= render "home/feed/feed" %>
+            </div>
         </div>
-    </div>
+        <!-- better feed -->
+        <div class="hidden col-span-1 lg:block lg:mr-28  lg:mt-12"> 
+            <div class="place-items-center">
+                <%= render "home/feed/better_feed" %>
+            </div>
+        </div>
 </div>
