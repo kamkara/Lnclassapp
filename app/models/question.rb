@@ -5,6 +5,6 @@ class Question < ApplicationRecord
   
   accepts_nested_attributes_for :answers
   validates_with QuestionValidator
-  validates :content, :explain_answer, :exercice_id, presence: true
 
+  #validates :content, :explain_answer, :exercice_id, :user_id, presence: true
 end

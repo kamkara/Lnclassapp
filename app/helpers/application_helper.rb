@@ -1,5 +1,6 @@
 module ApplicationHelper
-    #Onglet title
+
+#Onglet title
 def title
  base_title = "Lnclass Education"
   if @title.nil?
@@ -13,8 +14,8 @@ def description
   "Lnclass Education aide les élèves a apprendre facilement"
 end
 
-#Sign in and up anywhere on app
-  def resource_name
+    #Sign in and up anywhere on app
+    def resource_name
     :user
   end
   

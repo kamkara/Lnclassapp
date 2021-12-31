@@ -1,6 +1,11 @@
 <div class="m-2">
     <div class="w-full md:w-2/3">
       <h2 class="font-semibold text-xl m-2"> <%= @course.title %> </h2>
+      <p class="bg-red-500">
+      <%= link_to 'Exercices', new_course_exercice_path(@course) %>
+
+      
+      </p>
     </div>
     <div class="card rounded-md md:w-2/3">
       <div class="m-2 ">

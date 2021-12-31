@@ -2,18 +2,18 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :timeoutable, :trackable, authentication_keys:[:logged]
+         :recoverable, :rememberable, :validatable, :trackable, authentication_keys:[:logged]
 
-################## RELATIONS  ###############
-  #has_many :questions
+  has_many :questions
   has_many :materials
   has_many :levels
   has_many :courses
   has_many :schools
   has_many :classrooms
-  #has_many :exercices
-  #has_many :results
-
+  has_many :exercices
+  has_many :results
+  
+  
   attr_writer :logged
 
   
@@ -88,6 +88,4 @@ end
       where(conditions.to_h).first
     end
   end
-        
-        
 end

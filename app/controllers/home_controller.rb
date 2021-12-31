@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   before_action :find_levels
   before_action :find_materials
   
+   
   def index  
     @materials = Material.all.order('created_at desc')
     if current_user.role == "Student"
@@ -23,11 +24,12 @@ class HomeController < ApplicationController
   end
 
   private
-    def find_levels
-      @levels = Level.all
-    end
-
-    def find_materials
-      @materials = Material.all
-    end
-end
+      def find_levels
+        @levels = Level.all
+      end
+  
+      def find_materials
+        @materials = Material.all
+      end
+      
+  end
