@@ -1,5 +1,4 @@
  <% course.exercices.chrono.each do |q| %>
-        <p class="bg-red-500"> History: Large space payloads are, as paradoxical as it might sound, designed around the ticket that will carry them. Engineers use the rocket as the starting point and say “we need to design the payload to fit this rocket.” They don’t design the payload and then say “we need to build a rocket to carry this payload.”</p>
     <% if q.completed_by(current_user) %>
         <%= render partial: "completed_exercices", locals: {q: q} %>
     <% else %>
