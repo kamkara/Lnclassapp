@@ -92,7 +92,7 @@ production:
   password: <%= ENV['LNCLASSAPP_DATABASE_PASSWORD'] %>
   host: <%= ENV['LNCLASSAPP_DATABASE_HOST'] %>
   port: <%= ENV['LNCLASSAPP_DATABASE_PORT'] %>
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  #pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
  #url: <%= ENV['MY_APP_DATABASE_URL'] %>
 
 #  # For details on connection pooling, see Rails configuration guide
