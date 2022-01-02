@@ -99,7 +99,8 @@ production:
   encoding: unicode
   database: main
   username: main
-  password: 4a6a0eaf3e038b0539cd8ac129
+  password: main
+  #password: 4a6a0eaf3e038b0539cd8ac129
   host: postgresdatabase.internal
   port: 5432
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
