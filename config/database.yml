@@ -90,8 +90,8 @@ production:
   database: main
   username: main
   password: main
-  host: database.internal
-  #host: postgresdatabase.internal
+  #host: database.internal
+  host: postgresdatabase.internal
   port: 5432
   
 #production:
