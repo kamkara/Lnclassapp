@@ -89,10 +89,9 @@ production:
   encoding: unicode
   database: main
   username: main
-  password: kjdhf45sdfdxf
+  password: main
   host: postgresdatabase.internal
   port: 5432
-
   
 #production:
 #  adapter: postgresql
