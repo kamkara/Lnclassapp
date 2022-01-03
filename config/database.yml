@@ -92,6 +92,8 @@ production:
   password: kjdhf45sdfdxf
   host: postgresdatabase.internal
   port: 5432
+
+  
 #production:
 #  adapter: postgresql
 #  encoding: unicode
